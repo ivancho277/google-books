@@ -8,20 +8,22 @@ import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
 
+//this is the component that builds our home page
 class Home extends Component {
+  //initial state of home component
   state = {
     books: [],
     q: "",
     message: "Search For A Book To Begin!"
   };
-
+// method that handles the change of our input bar and updates our state
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
   };
-
+  //
   getBooks = () => {
     API.getBooks(this.state.q)
       .then(res =>
