@@ -2,7 +2,7 @@ import React from "react";
 import { ListItem } from "../List";
 import { Row, Col } from "../Grid";
 import "./style.css";
-
+//renders a book component based on imported grid components
 function Book({ title, subtitle, authors, link, description, image, Button }) {
   return (
     <ListItem>

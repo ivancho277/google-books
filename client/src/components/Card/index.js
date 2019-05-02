@@ -1,5 +1,5 @@
 import React from "react";
-
+//card component 
 function Card({ icon, title, children }) {
   return (
     <div className="card mt-4">

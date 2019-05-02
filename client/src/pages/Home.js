@@ -23,10 +23,11 @@ class Home extends Component {
       [name]: value
     });
   };
-  //
+  //gets books according to query of state
   getBooks = () => {
     API.getBooks(this.state.q)
       .then(res =>
+        //when searched we changed the state of books array that will be displayed
         this.setState({
           books: res.data
         })
@@ -38,12 +39,12 @@ class Home extends Component {
         })
       );
   };
-
+  //method called when form is submited
   handleFormSubmit = event => {
     event.preventDefault();
     this.getBooks();
   };
-
+  //saved our book seatch to our api
   handleBookSave = id => {
     const book = this.state.books.find(book => book.id === id);
 

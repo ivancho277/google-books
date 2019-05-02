@@ -1,5 +1,5 @@
 import React from "react";
-
+//form component that grabs deconstucted props from parent
 function Form({ q, handleInputChange, handleFormSubmit }) {
   return (
     <form>

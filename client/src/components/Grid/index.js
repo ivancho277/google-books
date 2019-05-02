@@ -1,5 +1,5 @@
 import React from "react";
-
+//components so we can use bootstrap grid in jsx
 export function Container({ fluid, children }) {
   return <div className={`container${fluid ? "-fluid" : ""}`}>{children}</div>;
 }
